@@ -35,10 +35,10 @@
   border-radius: 4px;
   cursor: pointer;
   animation: fadein 1s ease-in-out;
+  outline: none;
 }
 
-.periodo__funcionalidade:focus {
-  outline: none;
+.periodo__funcionalidade--ativa {
   border-radius: 4px 4px 0 0;
 }
 
@@ -58,6 +58,6 @@
   border-color: rgba(0, 0, 0, 0.16);
 }
 
-.periodo__funcionalidade:focus + .periodo__descritivo {
+.periodo__descritivo--visivel {
   display: block;
 }
