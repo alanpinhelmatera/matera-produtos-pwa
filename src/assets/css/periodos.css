@@ -1,0 +1,17 @@
+.periodos {
+  display: grid;
+  grid-row-gap: 0.125em;
+  grid-column-gap: 0.125em;
+}
+
+@media (min-width: 768px) {
+  .periodos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .periodos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

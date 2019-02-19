@@ -1,0 +1,46 @@
+.produtos {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.5em 1em;
+  border-top-right-radius: 0.875em;
+  border-top-left-radius: 0.875em;
+}
+
+@media (min-width: 600px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1130px) {
+  .produtos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .produtos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.produtos--tema-banco {
+  background-color: #185ea2;
+}
+
+.produtos--tema-gestao {
+  background-color: #f2eeee;
+}
+
+.produtos .checkbox {
+  justify-self: start;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  animation: fadein 1s ease-in-out;
+}
