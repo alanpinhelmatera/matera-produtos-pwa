@@ -10,8 +10,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico',
+      template: path.resolve('src/index.html'),
+      favicon: path.resolve('src/favicon.ico'),
       minify: {
         minifyCSS: true,
         collapseWhitespace: true,

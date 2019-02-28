@@ -1,264 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Webapp de exemplo para treinamento interno de PWA." />
-    <meta name="theme-color" content="#185ea2" />
-    <title>Matera Produtos</title>
-    <style>
-      /*
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Webapp de exemplo para treinamento interno de PWA." />
+  <meta name="theme-color" content="#185ea2" />
+  <title>Matera Produtos</title>
+  <style>
+    /*
         http://meyerweb.com/eric/tools/css/reset/
         v2.0 | 20110126
         License: none (public domain)
       */
-      html,
-      body,
-      div,
-      span,
-      applet,
-      object,
-      iframe,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      pre,
-      a,
-      abbr,
-      acronym,
-      address,
-      big,
-      cite,
-      code,
-      del,
-      dfn,
-      em,
-      img,
-      ins,
-      kbd,
-      q,
-      s,
-      samp,
-      small,
-      strike,
-      strong,
-      sub,
-      sup,
-      tt,
-      var,
-      b,
-      u,
-      i,
-      center,
-      dl,
-      dt,
-      dd,
-      ol,
-      ul,
-      li,
-      fieldset,
-      form,
-      label,
-      legend,
-      table,
-      caption,
-      tbody,
-      tfoot,
-      thead,
-      tr,
-      th,
-      td,
-      article,
-      aside,
-      canvas,
-      details,
-      embed,
-      figure,
-      figcaption,
-      footer,
-      header,
-      hgroup,
-      menu,
-      nav,
-      output,
-      ruby,
-      section,
-      summary,
-      time,
-      mark,
-      audio,
-      video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
 
-      /* HTML5 display-role reset for older browsers */
-      article,
-      aside,
-      details,
-      figcaption,
-      figure,
-      footer,
-      header,
-      hgroup,
-      menu,
-      nav,
-      section {
-        display: block;
-      }
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
 
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+        Cantarell, 'Helvetica Neue', sans-serif;
+      padding: 1em 0.5em;
+      background: linear-gradient(to right, rgba(54, 206, 236, 1) 0%, rgba(22, 84, 155, 1) 100%);
+      overflow-y: scroll;
+    }
+
+    @media (min-width: 375px) {
       body {
-        line-height: 1;
+        font-size: 1.25em;
       }
+    }
 
-      ol,
-      ul {
-        list-style: none;
-      }
-
-      blockquote,
-      q {
-        quotes: none;
-      }
-
-      blockquote:before,
-      blockquote:after,
-      q:before,
-      q:after {
-        content: '';
-        content: none;
-      }
-
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
-
+    @media (min-width: 768px) {
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
-          Cantarell, 'Helvetica Neue', sans-serif;
-        padding: 1em 0.5em;
-        background: linear-gradient(to right, rgba(54, 206, 236, 1) 0%, rgba(22, 84, 155, 1) 100%);
-        overflow-y: scroll;
+        padding: 2em 1em;
       }
+    }
 
-      @media (min-width: 375px) {
-        body {
-          font-size: 1.25em;
-        }
+    @media (min-width: 1440px) {
+      body {
+        font-size: 1.5em;
       }
+    }
 
-      @media (min-width: 768px) {
-        body {
-          padding: 2em 1em;
-        }
+    @media (min-width: 1920px) {
+      body {
+        font-size: 1.625em;
       }
+    }
 
-      @media (min-width: 1440px) {
-        body {
-          font-size: 1.5em;
-        }
-      }
+    .container {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
 
-      @media (min-width: 1920px) {
-        body {
-          font-size: 1.625em;
-        }
-      }
+    .cabecalho__logo {
+      width: 6.875em;
+    }
 
-      .container {
-        max-width: 1920px;
-        margin: 0 auto;
-      }
+    .cabecalho__titulo-principal {
+      font-weight: 500;
+      color: #fefefb;
+      text-align: center;
+      margin-top: 0.625em;
+      margin-bottom: 1.5625em;
+    }
 
-      .cabecalho__logo {
-        width: 6.875em;
-      }
+    .modalidades {
+      display: flex;
+      justify-content: center;
+    }
 
-      .cabecalho__titulo-principal {
-        font-weight: 500;
-        color: #fefefb;
-        text-align: center;
-        margin-top: 0.625em;
-        margin-bottom: 1.5625em;
-      }
+    .modalidades__link {
+      display: inline-block;
+      font-size: 0.875em;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em;
+      cursor: pointer;
+    }
 
-      .modalidades {
-        display: flex;
-        justify-content: center;
-      }
-
+    @media (min-width: 768px) {
       .modalidades__link {
-        display: inline-block;
-        font-size: 0.875em;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 0.4em 1em;
-        border-top-right-radius: 1em;
-        border-top-left-radius: 1em;
-        cursor: pointer;
+        padding: 0.7812em 3.75em;
+      }
+    }
+
+    .modalidades__link--tema-banco {
+      color: #fff;
+      background-color: #185ea2;
+    }
+
+    .modalidades__link--tema-gestao {
+      color: #185ea2;
+      background-color: #f2eeee;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0.1;
       }
 
-      @media (min-width: 768px) {
-        .modalidades__link {
-          padding: 0.7812em 3.75em;
-        }
+      to {
+        opacity: 1;
       }
+    }
+  </style>
+</head>
 
-      .modalidades__link--tema-banco {
-        color: #fff;
-        background-color: #185ea2;
-      }
+<body>
+  <header class="container cabecalho">
+    <img class="cabecalho__logo" src="./assets/images/logo.png"
+      alt="Logo da Matera contendo ilustração e texto ambos em branco." />
+    <h1 class="cabecalho__titulo-principal">Selecione a modalidade desejada</h1>
+  </header>
+  <main class="container">
+    <ul class="modalidades">
+      <li>
+        <a class="modalidades__link modalidades__link--tema-banco" data-modalidade="banco">
+          Matera Banco
+        </a>
+      </li>
+      <li>
+        <a class="modalidades__link modalidades__link--tema-gestao" data-modalidade="gestao">
+          Matera Gestão
+        </a>
+      </li>
+    </ul>
+    <div class="produtos"></div>
+    <div class="periodos"></div>
+  </main>
+</body>
 
-      .modalidades__link--tema-gestao {
-        color: #185ea2;
-        background-color: #f2eeee;
-      }
-
-      @keyframes fadein {
-        from {
-          opacity: 0.1;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="container cabecalho">
-      <img
-        class="cabecalho__logo"
-        src="./logo.png"
-        alt="Logo da Matera contendo ilustração e texto ambos em branco."
-      />
-      <h1 class="cabecalho__titulo-principal">Selecione a modalidade desejada</h1>
-    </header>
-    <main class="container">
-      <ul class="modalidades">
-        <li>
-          <a class="modalidades__link modalidades__link--tema-banco" data-modalidade="banco">
-            Matera Banco
-          </a>
-        </li>
-        <li>
-          <a class="modalidades__link modalidades__link--tema-gestao" data-modalidade="gestao">
-            Matera Gestão
-          </a>
-        </li>
-      </ul>
-      <div class="produtos"></div>
-      <div class="periodos"></div>
-    </main>
-  </body>
 </html>
