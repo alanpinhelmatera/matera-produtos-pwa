@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest')
 const webpack = require('webpack');
 
 module.exports = {
@@ -22,7 +23,25 @@ module.exports = {
         useShortDoctype: true
       }
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new WebpackPwaManifest({
+      name: 'Matera Produtos',
+      short_name: 'MProdutos',
+      description: 'Webapp de exemplo para treinamento interno de PWA.',
+      theme_color: '#185ea2',
+      background_color: '#185ea2',
+      display: 'standalone',
+      scope: '/',
+      start_url: '/',
+      lang: 'pt-BR',
+      orientation: 'any',
+      icons: [
+        {
+          src: path.resolve('src/assets/images/favicon-512x512.png'),
+          size: '512x512'
+        }
+      ]
+    })
   ],
   output: {
     filename: '[name].[hash].js',
