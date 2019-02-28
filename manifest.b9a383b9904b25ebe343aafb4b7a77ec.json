@@ -1,0 +1,19 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.dfccad6bc3d072fd9b1c69fc233bb9ef.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "Matera Produtos",
+  "short_name": "MProdutos",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Webapp de exemplo para treinamento interno de PWA.",
+  "theme_color": "#185ea2",
+  "background_color": "#185ea2",
+  "scope": "/",
+  "lang": "pt-BR"
+}
