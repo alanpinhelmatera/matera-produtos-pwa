@@ -1,10 +1,10 @@
-import './assets/css/produtos.css';
-import './assets/css/periodos.css';
-import './assets/css/periodo.css';
-import './assets/css/checkbox.css';
-import selectModalidadeTrigger from './SelectModalidadeTrigger';
-import selectProdutoTrigger from './SelectProdutoTrigger';
-import selectFuncionalidadeTrigger from './SelectFuncionalidadeTrigger';
+import './assets/styles/produtos.css';
+import './assets/styles/periodos.css';
+import './assets/styles/periodo.css';
+import './assets/styles/checkbox.css';
+import selectModalidadeTrigger from './app/SelectModalidadeTrigger';
+import selectProdutoTrigger from './app/SelectProdutoTrigger';
+import selectFuncionalidadeTrigger from './app/SelectFuncionalidadeTrigger';
 
 selectModalidadeTrigger();
 selectProdutoTrigger();
