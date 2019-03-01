@@ -10,10 +10,10 @@
   "short_name": "MProdutos",
   "orientation": "any",
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "/matera-produtos-pwa/",
   "description": "Webapp de exemplo para treinamento interno de PWA.",
   "theme_color": "#185ea2",
   "background_color": "#185ea2",
-  "scope": "/",
+  "scope": "/matera-produtos-pwa/",
   "lang": "pt-BR"
 }

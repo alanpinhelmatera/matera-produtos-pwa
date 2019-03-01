@@ -1,9 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "url": "manifest.b9a383b9904b25ebe343aafb4b7a77ec.json"
+    "url": "manifest.4ec8d5cd6586eafb01db3c552c4f97dd.json"
   },
   {
-    "revision": "c8f941ff651f23aea24681ffba5aaa5a",
+    "revision": "4d41fc870a1c51722e6c4ad55c7c317a",
     "url": "index.html"
   },
   {
