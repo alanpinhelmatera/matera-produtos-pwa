@@ -43,8 +43,16 @@ module.exports = {
         }
       ]
     }),
-    new WorkboxPlugin.InjectManifest({
-      swSrc: path.resolve('src/sw.js')
+    new WorkboxPlugin.GenerateSW({
+      swDest: 'sw.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('https://spreadsheets.google.com/feeds/list/'),
+          handler: 'NetworkFirst'
+        }
+      ]
     })
   ],
   output: {
