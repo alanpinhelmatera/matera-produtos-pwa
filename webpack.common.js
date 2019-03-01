@@ -32,8 +32,8 @@ module.exports = {
       theme_color: '#185ea2',
       background_color: '#185ea2',
       display: 'standalone',
-      scope: '/',
-      start_url: '/',
+      scope: '/matera-produtos-pwa/',
+      start_url: '/matera-produtos-pwa/',
       lang: 'pt-BR',
       orientation: 'any',
       icons: [
