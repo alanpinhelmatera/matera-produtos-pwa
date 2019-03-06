@@ -28,4 +28,4 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.NetworkFirst(), 'GET');
+workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.CacheFirst(), 'GET');
