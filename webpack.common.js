@@ -50,7 +50,7 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: new RegExp('https://spreadsheets.google.com/feeds/list/'),
-          handler: 'NetworkFirst'
+          handler: 'CacheFirst'
         }
       ]
     })
