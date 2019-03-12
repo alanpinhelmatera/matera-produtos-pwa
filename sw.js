@@ -11,13 +11,14 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.31962d49610ace67a733f246bc9e7d8c.js"
+  "precache-manifest.44a2aadf57018d43a544688f81dd2557.js"
 );
 
 workbox.core.skipWaiting();
+
 workbox.core.clientsClaim();
 
 /**
@@ -28,4 +29,4 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.CacheFirst(), 'GET');
+workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.NetworkFirst(), 'GET');
