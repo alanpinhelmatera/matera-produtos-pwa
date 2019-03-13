@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.9fadefc179afbfa91481173b5eb34228.js"
+  "precache-manifest.44a2aadf57018d43a544688f81dd2557.js"
 );
 
 workbox.core.skipWaiting();
@@ -29,4 +29,4 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.NetworkFirst(), 'GET');
+workbox.routing.registerRoute(/https:\/\/spreadsheets.google.com\/feeds\/list\//, new workbox.strategies.StaleWhileRevalidate(), 'GET');
